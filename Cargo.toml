@@ -3,6 +3,11 @@ name = "mycraft"
 version = "0.1.0"
 authors = ["Tanapol Prucksakorn <tanapol.pr@gmail.com>"]
 edition = "2018"
+license = "Apache-2.0"
+readme = "README.md"
+repository = "https://github.com/zynaxsoft/mycraft-rs"
+homepage = "https://github.com/zynaxsoft/mycraft-rs"
+keywords = ["gamedev", "minecraft"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
