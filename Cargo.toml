@@ -8,6 +8,7 @@ readme = "README.md"
 repository = "https://github.com/zynaxsoft/mycraft-rs"
 homepage = "https://github.com/zynaxsoft/mycraft-rs"
 keywords = ["gamedev", "minecraft"]
+description = "A custom Minecraft server framework"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
