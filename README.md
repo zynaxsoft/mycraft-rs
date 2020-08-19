@@ -1,3 +1,5 @@
+[![](https://img.shields.io/crates/v/mycraft)](https://crates.io/crates/mycraft)
+
 # Mycraft
 
 A custom Minecraft server written in Rust from scratch driven by `async_std`. The main purpose of this project
