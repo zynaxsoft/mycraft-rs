@@ -6,8 +6,11 @@ use mycraft::packet::{
     reader::McBytesReader,
 };
 
-#[async_std::main]
-async fn main() {
+fn main() {
+    task::block_on(accept_loop());
+}
+
+async fn accept_loop() {
     let listener = TcpListener::bind("0.0.0.0:7781").await.unwrap();
     let mut incoming = listener.incoming();
 

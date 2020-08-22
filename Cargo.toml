@@ -15,7 +15,4 @@ description = "A custom Minecraft server framework"
 [dependencies]
 futures = "0.3.5"
 async-codec = "0.4.0-alpha.4"
-
-[dependencies.async-std]
-version = "1.6.3"
-features = ["attributes"]
+async-std = "1.6.3"
