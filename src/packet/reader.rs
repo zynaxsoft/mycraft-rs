@@ -1,8 +1,13 @@
 use std::vec::IntoIter;
+use std::convert::TryInto;
 
-#[derive(Debug, Clone, Copy)]
+use thiserror::Error;
+
+#[derive(Debug, Clone, Copy, Error)]
 pub enum McBytesErr {
+    #[error("Varint is too big.")]
     VarintTooBig,
+    #[error("Insufficient data to read.")]
     InsufficientBytes,
 }
 
@@ -41,6 +46,12 @@ impl McBytesReader {
     pub fn read_unsigned_short(&mut self) -> Result<u16, McBytesErr> {
         let result: u16 = self.read_one_byte()? as u16 + ((self.read_one_byte()? as u16) << 8);
         Ok(result)
+    }
+
+    pub fn read_double(&mut self) -> Result<f64, McBytesErr> {
+        let buf = self.read_bytes(8)?;
+        let array: [u8; 8] = buf.as_slice().try_into().unwrap();
+        Ok(f64::from_be_bytes(array))
     }
 
     pub fn read_string(&mut self) -> Result<String, McBytesErr> {

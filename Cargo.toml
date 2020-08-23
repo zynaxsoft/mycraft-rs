@@ -18,3 +18,4 @@ async-codec = "0.4.0-alpha.4"
 color-eyre = { version = "0.5.1", default-features = false }
 thiserror = "1.0.20"
 async-std = "1.6.3"
+num_enum = "0.5.1"

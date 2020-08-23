@@ -13,6 +13,8 @@ Any suggestions and feedback is very welcome.
 # Progress
 <img src="https://github.com/zynaxsoft/mycraft-rs/blob/master/pics/demo-1.png">
 Login to the server is possible, however it is not possible to do anything.
+Chunk data is implemented but the client still doesn't show anything.
+Character will fall to the abyss.
 
 # Acknowledgement
 
